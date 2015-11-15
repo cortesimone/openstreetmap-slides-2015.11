@@ -76,6 +76,30 @@ Transition Styles
 -->
 
 				<section>
+					<h2>rendering standard</h2>
+					<img src="images/milano1.png" />
+				</section>
+
+				<section>
+					<h2>rendering cicli</h2>
+					<img src="images/milano2.png" />
+				</section>
+
+				<section>
+					<h2>rendering trasporti</h2>
+					<img src="images/milano3.png" />
+				</section>
+
+				<!--  planet  -->
+				<section>
+					<h2>OSM ha molti dati</h2>
+					<ul>
+						<li>Planet File: 45GB (+25% da gennaio)</li>
+						<li>Delta settimanale: 1.2 GB </li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>Storia</h2>
 					<ul>
 						<li>Fondato nel 2004</li>
@@ -87,14 +111,81 @@ Transition Styles
 					</ul>
 				</section>
 
-				<!--  planet  -->
 				<section>
-					<h2>OSM ha molti dati</h2>
+					<h2>Capire i dati</h2>
 					<ul>
-						<li>Planet File: 45GB (+25% da gennaio)</li>
-						<li>Delta settimanale: 1.2 GB </li>
+						<li>non ci sono layer</li>
+						<li>...ma solo tag</li>
+						<li><a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>, <a href="http://taginfo.openstreetmap.org/">Taginfo</a>
 					</ul>
 				</section>
+
+
+				<!--  amenity drinking water -->
+				<section>
+					<h1>soprattutto un database</h1>
+
+				</section>
+
+				<!--  amenity drinking water -->
+				<section>
+					<h2>estrazione dati</h2>
+					<img src="images/drinking.png" />
+				</section>
+
+				<section>
+					<h2>overpass-api</h2>
+					<pre><code data-trim contenteditable>
+&lt;query type="node">
+	&lt;has-kv k="amenity" v="drinking_water"/>
+	&lt;bbox-query {{bbox}}/>
+&lt;/query>	
+				</code></pre>
+				</section>
+
+				<!--  istat -->
+				<section>
+					<h3>ISTAT - Popolazione</h3>
+<pre><code data-trim><osm-script output="json">
+  <query type="area">
+    <has-kv k="name" v="Italia"/>
+  </query>
+  <query type="node">
+    <has-kv k="place"/>
+    <has-kv k="population"/>
+    <has-kv k="place" v="city"/>
+    <area-query/>
+  </query>
+  <print mode="body" order="quadtile"/>
+</osm-script>
+{{style:
+node {
+  color:blue;
+  opacity:0.2;
+  width:3;
+  fill-color:blue;
+  fill-opacity:0.4;
+  symbol-shape: circle;
+  symbol-size: eval('max(3,min(200,0.02*Math.sqrt(tag("population"))))');
+}
+}}</code></pre></section>
+
+
+				<!--  istat -->
+				<section id="istat">
+					<h2>overpass-api</h2>
+					<p>realtime styling</p>
+					<p><a href="http://overpass-turbo.eu/s/k">overpass turbo query</a></p>
+					<img src="images/overpass-style.png" />
+				</section>
+
+
+
+				<section>
+					<h2>Simulazioni</h2>
+					<img src="images/multi_agent_simulation.jpg" />
+				</section>
+
 
 
 				<section>
@@ -118,34 +209,6 @@ Transition Styles
 				</section>
 
 
-				<section>
-					<h2>rendering</h2>
-					<img src="images/milano1.png" />
-				</section>
-
-				<section>
-					<h2>rendering</h2>
-					<img src="images/milano2.png" />
-				</section>
-
-				<section>
-					<h2>rendering</h2>
-					<img src="images/milano3.png" />
-				</section>
-
-				<section>
-					<h2>rendering</h2>
-					<img src="images/milano4.png" />
-				</section>
-
-				<section>
-					<h2>Capire i dati</h2>
-					<ul>
-						<li>non ci sono layer</li>
-						<li>...ma solo tag</li>
-						<li><a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>, <a href="http://taginfo.openstreetmap.org/">Taginfo</a>
-					</ul>
-				</section>
 
 				<section>
 
@@ -187,63 +250,6 @@ Transition Styles
 					<img src="images/leaflet.png" />
 				</section>
 
-				<!--  amenity drinking water -->
-				<section>
-					<h1>soprattutto un database</h1>
-
-				</section>
-
-				<!--  amenity drinking water -->
-				<section>
-					<h2>estrazione dati</h2>
-					<img src="images/drinking.png" />
-				</section>
-
-				<section>
-					<h2>overpass-api</h2>
-					<pre><code data-trim contenteditable>
-&lt;query type="node">
-	&lt;has-kv k="amenity" v="drinking_water"/>
-	&lt;bbox-query {{bbox}}/>
-&lt;/query>	
-				</code></pre>
-				</section>
-
-				<!--  istat -->
-				<section id="istat">
-					<h2>overpass-api</h2>
-					<h3>realtime styling</h3>
-					<img src="images/overpass-style.png" />
-					<p><a href="http://overpass-turbo.eu/s/k">overpass turbo query</a></p>
-				</section>
-
-				<!--  istat -->
-				<section>
-					<h3>ISTAT - Popolazione</h3>
-<pre><code data-trim><osm-script output="json">
-  <query type="area">
-    <has-kv k="name" v="Italia"/>
-  </query>
-  <query type="node">
-    <has-kv k="place"/>
-    <has-kv k="population"/>
-    <has-kv k="place" v="city"/>
-    <area-query/>
-  </query>
-  <print mode="body" order="quadtile"/>
-</osm-script>
-{{style:
-node {
-  color:blue;
-  opacity:0.2;
-  width:3;
-  fill-color:blue;
-  fill-opacity:0.4;
-  symbol-shape: circle;
-  symbol-size: eval('max(3,min(200,0.02*Math.sqrt(tag("population"))))');
-}
-}}</code></pre></section>
-
 				<section>
 					<h2>Editing the data</h2>
 					<ul>
@@ -269,41 +275,9 @@ node {
 					<img src="images/routing.png"/>
 					geocoding - routing - public transport - quality assurance
 				</section>
-				
+												
 				<section>
-					<h2>Geocoding</h2>
-					<h3>Search engine services</h3>
-					<ul>
-					<li class="fragment"><a href="http://nominatim.openstreetmap.org">Nominatim</a> (official with <a href="http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy">fair use policy</a> ) by <a href="http://developer.mapquest.com/web/products/open/nominatim">Mapquest</a> (data under ODbL)</li>
-					<li class="fragment"><a href="http://cloudmade.com/products/geocoding">Cloudmade</a> - with API commercial support (15$ per 100,000 transactions)</li> 
-					<li class="fragment"><a href="http://www.gisgraphy.com/premium/index.htm">GISGraphy</a> - with <a href="http://www.gisgraphy.com/premium/index.htm#sla">API commercial support</a></li> 
-					</ul>
-					<br/><br/>
-					<h3>Search engine open source software</h3>
-					<ul>
-					<li class="fragment"><a href="http://wiki.openstreetmap.org/wiki/Nominatim">Nominatim</a> php+postgresql</li>
-					<li class="fragment"><a href="http://www.gisgraphy.com/download/index.htm">GISGraphy</a> (LGPL) java+postgresql offers API for Android like Google</li>
-					<li class="fragment"><a href="http://photon.komoot.de/">Photon</a> (Apache License 2.0) java+postgresql+solr used in <a href="http://www.komoot.de">komoot</a></li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Komoot <span style="font-size:small">(top)</span></h2>
-					<img src="images/komoot.png">
-				</section>
-				
-				<section>
-					<h2>Komoot <span style="font-size:small">(bottom)</span></h2>
-					<img src="images/komootbottom.png">
-				</section>
-				
-				<section>
-					<h2>Routing</h2>
-					<p>online, offline, embedded</p>
-				</section>
-
-				<section>
-					<h2>Routing</h2>
+					<h2>Geocoding e Routing</h2>
 					<p>online, offline, embedded</p>
 				</section>
 
