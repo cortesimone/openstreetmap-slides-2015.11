@@ -92,12 +92,29 @@ Transition Styles
 
 				<!--  planet  -->
 				<section>
-					<h2>OSM ha molti dati</h2>
+					<h2>denso di dati</h2>
 					<ul>
 						<li>Planet File: 45GB (+25% da gennaio)</li>
 						<li>Delta settimanale: 1.2 GB </li>
 					</ul>
+					<img src="images/sotm.jpg"/><br/>
 				</section>
+
+				<section>
+					<h2>Alcuni tematismi</h2>
+					<ul>
+						<li>Civici</li>
+						<li>Edificato</li>
+						<li>Strade bianche</li>
+						<li>Sentieri</li>
+						<li>Idranti</li>
+						<li>Scale</li>
+					</ul>
+				</section>
+
+				<section data-background="images/ezgif.com-crop.gif">
+				</section>
+
 
 				<section>
 					<h2>Storia</h2>
@@ -112,194 +129,13 @@ Transition Styles
 				</section>
 
 				<section>
-					<h2>Capire i dati</h2>
-					<ul>
-						<li>non ci sono layer</li>
-						<li>...ma solo tag</li>
-						<li><a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>, <a href="http://taginfo.openstreetmap.org/">Taginfo</a>
-					</ul>
-				</section>
-
-
-				<!--  amenity drinking water -->
-				<section>
-					<h1>soprattutto un database</h1>
-
-				</section>
-
-				<!--  amenity drinking water -->
-				<section>
-					<h2>estrazione dati</h2>
-					<img src="images/drinking.png" />
-				</section>
-
-				<section>
-					<h2>overpass-api</h2>
-					<pre><code data-trim contenteditable>
-&lt;query type="node">
-	&lt;has-kv k="amenity" v="drinking_water"/>
-	&lt;bbox-query {{bbox}}/>
-&lt;/query>	
-				</code></pre>
-				</section>
-
-				<!--  istat -->
-				<section>
-					<h3>ISTAT - Popolazione</h3>
-<pre><code data-trim><osm-script output="json">
-  <query type="area">
-    <has-kv k="name" v="Italia"/>
-  </query>
-  <query type="node">
-    <has-kv k="place"/>
-    <has-kv k="population"/>
-    <has-kv k="place" v="city"/>
-    <area-query/>
-  </query>
-  <print mode="body" order="quadtile"/>
-</osm-script>
-{{style:
-node {
-  color:blue;
-  opacity:0.2;
-  width:3;
-  fill-color:blue;
-  fill-opacity:0.4;
-  symbol-shape: circle;
-  symbol-size: eval('max(3,min(200,0.02*Math.sqrt(tag("population"))))');
-}
-}}</code></pre></section>
-
-
-				<!--  istat -->
-				<section id="istat">
-					<h2>overpass-api</h2>
-					<p>realtime styling</p>
-					<p><a href="http://overpass-turbo.eu/s/k">overpass turbo query</a></p>
-					<img src="images/overpass-style.png" />
-				</section>
-
-
-
-				<section>
-					<h2>Simulazioni</h2>
-					<img src="images/multi_agent_simulation.jpg" />
-				</section>
-
-
-
-				<section>
-				<!-- Kibera -->
-				<section data-background="images/48_full.jpg">
-				</section>
-
-				<section data-background="images/kibera_post.png">
-				</section>
-
-				<section data-background="images/ezgif.com-crop.gif">
-				</section>
-
-				<!-- Haiti -->
-				<section data-background="images/port_au_prince_pre.png">
-				</section>
-
-				<section data-background="images/port_au_prince_post.png">
-				</section>
-
-				</section>
-
-
-
-				<section>
-
-				<!--  map rendering  -->
-				<section>
-					<h3>ma è facile usare anche dati di una singola zona</h3>
-					<img src="images/pavia.png" />
-				</section>
-	
-				<!--  map rendering  -->
-				<section id="pavia-tilemill">
-					<ul>
-					<li>età edificato</li>
-					<li>colorcoded su dati nativi OSM</li>
-					<li><pre><code>start_date=*</code></pre></li>
-					<li>in 2 ore</li>
-				</ul>
-				</section>
-
-				</section>
-
-				<section>
-				<section>
-					<h2>City of New York City and OSM</h2>
-					<a href="https://www.mapbox.com/blog/nyc-and-openstreetmap-cooperating-through-open-data/">New York City and OpenStreetMap Collaborating Through Open Data</a>
-					<img src="images/ny_change_detection.png"/><br/>
-				</section>
-				
-				<section>
-					<h2>Milano</h2>
-					<img src="images/amat.png"/><br/>
-					<a href="http://www.amat-mi.it/">amat-mi.it</a>
-				</section>
-				</section>
-
-				<!--  leaflet js  -->
-				<section>
-					<h3>Leaflet.JS</h3>
-					<img src="images/leaflet.png" />
-				</section>
-
-				<section>
-					<h2>Editing the data</h2>
-					<ul>
-						<li><a href="http://josm.openstreetmap.de">JOSM</a></li>
-							<ul><li>Standalone editor, written in Java</li>
-							<li>Powerful and flexible</li>
-							<li>Communicates with API over HTTP</li></ul>
-						<li><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a></li>
-							<ul><li>Online Flash Editor</li>
-							<li>Easy to use</li></ul>
-						<li><a href="http://ideditor.com/">iD</a></li>
-							<ul><li>HTML5/JavaScript/d3.js, in early development</li></ul>
-					</ul>
-				</section>
-
-				<section>
-					<h2>product/service</h2>
-					<img src="images/field_paper.png" />
-				</section>
-
-				<section>
-					<h2>Services</h2>
-					<img src="images/routing.png"/>
-					geocoding - routing - public transport - quality assurance
-				</section>
-												
-				<section>
-					<h2>Geocoding e Routing</h2>
-					<p>online, offline, embedded</p>
-				</section>
-
-				<section>
-				<h2>quality assurance</h2>
-				... again a lot of tools <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">http://wiki.openstreetmap.org/wiki/Quality_Assurance</a>
-				<p class="fragment">
-				We suggest to look and collaborate with <a href="http://osmose.openstreetmap.fr">OSMOSE</a><br/>
-				<img src="images/osmose.png"/>
-				</p>
-				</section>
-
-				<section>
-				<h2>OSMOSE</h2>
-				<img src="images/osmose2.png"/>
-				</section>
-
-				<section>
-				<h2>OpenStreetMap = users</h2>
+				<h2>OpenStreetMap = utenti</h2>
 				<img src="images/neis_rome_all.png"/>
 				<br/>
 				<a href="http://resultmaps.neis-one.org/oooc?zoom=14&lat=41.90121&lon=12.50622&layers=00BTFFFFFT">Overview of OpenStreetMap Contributors</a>
+				</section>
+
+				<section data-background="images/mapgive.png">
 				</section>
 
 				<section>
@@ -345,12 +181,182 @@ node {
 				</section>
 
 
-					
 
 				<section>
-					<h2>OpenStreetMap è fatto di persone</h2>
-					<img src="images/sotm.jpg"/><br/>
-					<h2>come te</h2>
+					<h2>Capire i dati</h2>
+					<ul>
+						<li>non ci sono layer</li>
+						<li>...ma solo tag</li>
+						<li><a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>, <a href="http://taginfo.openstreetmap.org/">Taginfo</a>
+					</ul>
+				</section>
+
+				<!--  amenity drinking water -->
+				<section>
+					<h2>estrazione dati</h2>
+					<img src="images/drinking.png" />
+				</section>
+
+				<section>
+					<h2>esempio estrazione</h2>
+					<pre><code data-trim contenteditable>
+&lt;query type="node">
+	&lt;has-kv k="amenity" v="drinking_water"/>
+	&lt;bbox-query {{bbox}}/>
+&lt;/query>	
+				</code></pre>
+				</section>
+
+				<!--  istat -->
+				<section>
+					<h3>ISTAT - Popolazione</h3>
+<pre><code data-trim><osm-script output="json">
+  <query type="area">
+    <has-kv k="name" v="Italia"/>
+  </query>
+  <query type="node">
+    <has-kv k="place"/>
+    <has-kv k="population"/>
+    <has-kv k="place" v="city"/>
+    <area-query/>
+  </query>
+  <print mode="body" order="quadtile"/>
+</osm-script>
+{{style:
+node {
+  color:blue;
+  opacity:0.2;
+  width:3;
+  fill-color:blue;
+  fill-opacity:0.4;
+  symbol-shape: circle;
+  symbol-size: eval('max(3,min(200,0.02*Math.sqrt(tag("population"))))');
+}
+}}</code></pre></section>
+
+
+				<!--  istat -->
+				<section id="istat">
+					<h2>estrazione dati complessa</h2>
+					<p><a href="http://overpass-turbo.eu/s/k">linkabile</a></p>
+					<img src="images/overpass-style.png" />
+				</section>
+
+
+
+				<section>
+					<h2>Simulazioni</h2>
+					<img src="images/multi_agent_simulation.jpg" />
+				</section>
+
+
+
+				<section>
+				<!-- Kibera -->
+				<section data-background="images/48_full.jpg">
+				</section>
+
+				<section data-background="images/kibera_post.png">
+				</section>
+
+				<!-- Haiti -->
+				<section data-background="images/port_au_prince_pre.png">
+				</section>
+
+				<section data-background="images/port_au_prince_post.png">
+				</section>
+
+				<section>
+					<h2>product/service</h2>
+					<img src="images/field_paper.png" />
+				</section>
+
+
+				</section>
+
+
+
+				<section>
+
+				<!--  map rendering  -->
+				<section>
+					<h3>ma è facile usare anche dati di una singola zona</h3>
+					<img src="images/pavia.png" />
+				</section>
+	
+				<!--  map rendering  -->
+				<section id="pavia-tilemill">
+					<ul>
+					<li>età edificato</li>
+					<li>colorcoded su dati nativi OSM</li>
+					<li><pre><code>start_date=*</code></pre></li>
+					<li>in 2 ore</li>
+				</ul>
+				</section>
+
+				</section>
+
+				<section>
+				<section>
+					<h2>City of New York City and OSM</h2>
+					<a href="https://www.mapbox.com/blog/nyc-and-openstreetmap-cooperating-through-open-data/">New York City and OpenStreetMap Collaborating Through Open Data</a>
+					<img src="images/ny_change_detection.png"/><br/>
+				</section>
+				
+				<section>
+					<h2>Milano</h2>
+					<img src="images/amat.png"/><br/>
+					<a href="http://www.amat-mi.it/">amat-mi.it</a>
+				</section>
+				</section>
+
+				<section>
+				<section>
+					<h2>Services</h2>
+					<img src="images/routing.png"/>
+					geocoding - routing - public transport - quality assurance
+				</section>
+				<section>
+					<h2>Geocoding e Routing</h2>
+					<p>online, offline, embedded</p>
+				</section>
+
+				<!--  leaflet js  -->
+				<section>
+					<h3>Leaflet.JS</h3>
+					<img src="images/leaflet.png" />
+				</section>
+
+				<section>
+					<h2>Editing the data</h2>
+					<ul>
+						<li><a href="http://josm.openstreetmap.de">JOSM</a></li>
+							<ul><li>Standalone editor, written in Java</li>
+							<li>Powerful and flexible</li>
+							<li>Communicates with API over HTTP</li></ul>
+						<li><a href="http://wiki.openstreetmap.org/wiki/Potlatch_2">Potlatch</a></li>
+							<ul><li>Online Flash Editor</li>
+							<li>Easy to use</li></ul>
+						<li><a href="http://ideditor.com/">iD</a></li>
+							<ul><li>HTML5/JavaScript/d3.js, in early development</li></ul>
+					</ul>
+				</section>
+
+				</section>
+												
+
+				<section>
+				<section>
+				<h2>OSMOSE</h2>
+				<img src="images/osmose2.png"/>
+				</section>
+				<section>
+				<h2>quality assurance</h2>
+				... again a lot of tools <a href="http://wiki.openstreetmap.org/wiki/Quality_Assurance">http://wiki.openstreetmap.org/wiki/Quality_Assurance</a>
+				<p><a href="http://osmose.openstreetmap.fr">Osmose</a><br/>
+				<img src="images/osmose.png"/>
+				</p>
+				</section>
 				</section>
 
 				<section>
