@@ -78,18 +78,24 @@ Transition Styles
 				<section>
 					<h2>Storia</h2>
 					<ul>
-						<li>Fondato nel 2004 da Steve Coast</li>
-						<li>17 luglio 2005 - primo mapping party</li>
-						<li>2006 - la mappa va online</li>
-						<li>20 agosto 2006 - OpenStreetMap Foundation</li>
-						<li>2008 - bootstrap</li>
-						<li>2009 - primo web editor</li>
+						<li>Fondato nel 2004</li>
+						<li>marzo 2009 - 100.000 utenti</li>
 						<li>gennaio 2010 - 200.000 utenti</li>
 						<li>novembre 2011 - 500.000 utenti</li>
 						<li>gennaio 2013 - 1.000.000 utenti</li>
 						<li>giugno 2015 - 2.500.000 utenti</li>
 					</ul>
 				</section>
+
+				<!--  planet  -->
+				<section>
+					<h2>OSM ha molti dati</h2>
+					<ul>
+						<li>Planet File: 45GB (+25% da gennaio)</li>
+						<li>Delta settimanale: 1.2 GB </li>
+					</ul>
+				</section>
+
 
 				<section>
 				<!-- Kibera -->
@@ -109,9 +115,7 @@ Transition Styles
 				<section data-background="images/port_au_prince_post.png">
 				</section>
 
-
 				</section>
-
 
 
 				<section>
@@ -135,40 +139,11 @@ Transition Styles
 				</section>
 
 				<section>
-					<h2>Open Database License (ODbL)</h2>
-					<img src="images/odbl.png" />
-				</section>
-
-				<section>
 					<h2>Capire i dati</h2>
 					<ul>
 						<li>non ci sono layer</li>
 						<li>...ma solo tag</li>
 						<li><a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>, <a href="http://taginfo.openstreetmap.org/">Taginfo</a>
-					</ul>
-				</section>
-
-				<section id="Wikimedia_Italia">
-				<img src="images/Wikimedia_Italia-logo.svg.png" />
-				</section>
-
-
-				<!--  planet  -->
-				<section>
-					<h2>OSM “planet” files</h2>
-					<ul>
-						<li>API - solo per aggiunta dati</li>
-						<li>il planet globale serve solo in rari casi, spesso meglio estratti regionali e comunali</li>
-					</ul>
-				</section>
-
-
-				<!--  planet  -->
-				<section>
-					<h2>OSM ha molti dati</h2>
-					<ul>
-						<li>Planet File: 33 GB</li>
-						<li>Changeset: 782 MB</li>
 					</ul>
 				</section>
 
@@ -182,14 +157,11 @@ Transition Styles
 	
 				<!--  map rendering  -->
 				<section id="pavia-tilemill">
-					<h2>Tilemill</h2>
 					<ul>
-						<li>Pavia</li>
-					<li>showing building age</li>
-					<li>colorcoding based on native OSM data</li>
+					<li>età edificato</li>
+					<li>colorcoded su dati nativi OSM</li>
 					<li><pre><code>start_date=*</code></pre></li>
-					<li class="fragment">2 hour job</li>
-					<li class="fragment">tilemill is free and opensource software</li>
+					<li>in 2 ore</li>
 				</ul>
 				</section>
 
@@ -209,19 +181,6 @@ Transition Styles
 				</section>
 				</section>
 
-				<!--  web viz  -->
-				<section>
-					<h3>"API" di visualizzazione web</h3>
-				<ul>
-					<li>Openlayers</li>
-					<li>Leaflet.JS</li>
-					<li>Modestmaps</li>
-					<li>d3.js</li>
-					<li>mapstraction</li>
-					</ul>
-				</section>
-
-
 				<!--  leaflet js  -->
 				<section>
 					<h3>Leaflet.JS</h3>
@@ -234,21 +193,18 @@ Transition Styles
 
 				</section>
 
-
 				<!--  amenity drinking water -->
 				<section>
-					<h2>overpass-api</h2>
+					<h2>estrazione dati</h2>
 					<img src="images/drinking.png" />
 				</section>
-
 
 				<section>
 					<h2>overpass-api</h2>
 					<pre><code data-trim contenteditable>
 &lt;query type="node">
 	&lt;has-kv k="amenity" v="drinking_water"/>
-	&lt;bbox-query {{bbox}}/>&lt;!--this is auto-completed with the
-	current map view coordinates.-->
+	&lt;bbox-query {{bbox}}/>
 &lt;/query>	
 				</code></pre>
 				</section>
@@ -288,8 +244,6 @@ node {
 }
 }}</code></pre></section>
 
-
-
 				<section>
 					<h2>Editing the data</h2>
 					<ul>
@@ -303,29 +257,6 @@ node {
 						<li><a href="http://ideditor.com/">iD</a></li>
 							<ul><li>HTML5/JavaScript/d3.js, in early development</li></ul>
 					</ul>
-				</section>
-
-				<!--  Help
-					Help.osm is your best resource
-					or tweet osmers
-				-->
-				<section>
-					<h2>Help</h2>
-					<ul>
-						<li>help.openstreetmap.org</li>
-						<li>very active and helpfull mailinglst</li>
-						<li>Twitter <a href="http://twitter.com/openstreetmapit">@OpenstreetmapIT</a></li>
-					</ul>
-				</section>		
-
-				<section>
-					<h2>products</h2>
-					<img src="images/mat.jpg" />
-				</section>
-
-				<section>
-					<h2>products</h2>
-					<img src="images/dressmap.jpg" />
 				</section>
 
 				<section>
@@ -368,29 +299,12 @@ node {
 				
 				<section>
 					<h2>Routing</h2>
-					<p style="text-align: left">
-					There are many offline, embedded and web-based routing services using OpenStreetMap data<br/>
-					<span class="fragment">
-					Please visit: <a href="http://wiki.openstreetmap.org/wiki/Routing">http://wiki.openstreetmap.org/wiki/Routing</a></span></p>			
-					<p  style="text-align: left">
-					<ul class="fragment">
-						<li><a href="http://pgrouting.org/">pg_routing</a>: extension for postgis with osm data support GPL,C++</li>
-						<li><a href="http://project-osrm.org/">OSRM</a> C++,BSD, research oriented   </li>
-						<li><a href="http://graphhopper.com/">Graphhoper</a> Java, Apache, Scales from big server to mobile device, works on Raspberry Pi</li>
-						<li><a href="http://www.gaia-gis.it/gaia-sins/">Spatialite</a> VirtualNetwork C, GPL/LGPL/MPL, portable</li>
-					</ul>
-
-					<p class="fragment">
-					... and other services in the cloud made available by Cloudmade, MapQuest, Skobbler...
-					</p>
+					<p>online, offline, embedded</p>
 				</section>
-				
+
 				<section>
-					<h2>Public Transport</h2>
-					<p style="text-align: left">
-					<a href="http://opentripplanner.org">OpenTripPlanner</a> provides a range of passenger information and transportation network analysis features using our infrastructure for finding itineraries combining transit, pedestrian, bike, and car segments.<br/>network from osm, tpl from gtfs sources, lgpl, java
-					</p>
-					<img src="images/otp_nyc_demo_screenshot_crop.png">
+					<h2>Routing</h2>
+					<p>online, offline, embedded</p>
 				</section>
 
 				<section>
@@ -466,10 +380,10 @@ node {
 				</section>
 
 				<section>
-					<h1>THANKS</h1>
+					<h1>Grazie</h1>
 					<p>Simone Cortesi <a href="http://twitter.com/simonecortesi">@simonecortesi</a></p>
 					<p> </p>
-					<p style="font-size:small">Slides: CC-BY-SA</p>
+					<p>Slides: CC-BY-SA</p>
 				</section>
 
 			</div>
