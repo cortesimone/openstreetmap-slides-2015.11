@@ -109,7 +109,8 @@ Transition Styles
 						<li>Sentieri</li>
 						<li>Idranti</li>
 						<li>Scale</li>
-						<li>Ri</li>
+						<li>Binari</li>
+						<li>Corsi d'acqua / Fossi</li>
 					</ul>
 				</section>
 
@@ -191,6 +192,13 @@ Transition Styles
 						<li><a href="http://wiki.openstreetmap.org/wiki/Map_Features">Map Features</a>, <a href="http://taginfo.openstreetmap.org/">Taginfo</a>
 					</ul>
 				</section>
+
+				<section>
+					<h2>estratti</h2>
+					<p><a href="http://osm-toolserver-italia.wmflabs.org/estratti/it/regioni/"><img src="images/estratti.png" /><br />link</a></p>
+				</section>
+
+
 
 				<!--  amenity drinking water -->
 				<section>
@@ -362,8 +370,8 @@ node {
 
 				<section>
 					<h1>Grazie</h1>
-					<p>Simone Cortesi <a href="http://twitter.com/simonecortesi">@simonecortesi</a></p>
-					<p> </p>
+					<p>Simone Cortesi <br />
+					<p>simone@cortesi.com</p>
 					<p>Slides: CC-BY-SA</p>
 				</section>
 
@@ -393,6 +401,7 @@ node {
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/print-pdf/print-pdf.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
