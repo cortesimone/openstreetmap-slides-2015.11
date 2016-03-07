@@ -1,5 +1,5 @@
 # these slides
-This slides teck is part of my talk given in Milano in November 2015, live (and working version) can be found here: https://maps.cortesi.com/slides/openstreetmap-slides-2015.11/#/
+This slides deck is part of my talk given in Milano in November 2015, live (and working version) can be found here: https://maps.cortesi.com/slides/openstreetmap-slides-2015.11/#/
 
 In order to make them I used reveal,js, whose README is attached.
 
