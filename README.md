@@ -1,3 +1,8 @@
+# these slides
+This slides teck is part of my talk given in Milano in November 2015, live (and working version) can be found here: https://maps.cortesi.com/slides/openstreetmap-slides-2015.11/#/
+
+In order to make them I used reveal,js, whose README is attached.
+
 # reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.svg?branch=master)](https://travis-ci.org/hakimel/reveal.js)
 
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
